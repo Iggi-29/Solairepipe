@@ -56,12 +56,7 @@ for (i in 1:length(results_folders)) {
   for (filee in 1:length(files_to_copy_now)) {
     cmd5 <- paste0("cp ",files_to_copy_now[filee]," ",results_folders_now)
     system(cmd5)
-  }
+    }
   
   }
-
-
-# for (i in 1:length(folders_to_copy))
-
-
 
