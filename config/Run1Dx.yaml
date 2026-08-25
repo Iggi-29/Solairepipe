@@ -1,0 +1,31 @@
+raw_data_base_path: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Raw_data/Run1Dx
+results_base_path: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Results/Run1Dx
+logs_and_bmk_base_path: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Results/Run1Dx/Run
+genome: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/GRCh38.primary_assembly.genome.fa.gz
+genome_unc: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/GRCh38.primary_assembly.genome.fa
+gtf: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/gencode.v50.primary_assembly.annotation.gtf.gz
+gtf_unc: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/gencode.v50.primary_assembly.annotation.gtf
+images:
+- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/fastqc_0.12.1.sif
+- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/multiqc_1_8.sif
+- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/trimmomatic_0_38.sif
+- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/bwa_0.7.17.sif
+- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/samtools_1.20.sif
+- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/varscan_2_4_2.sif
+samples:
+  SRR359970:
+    R1: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Raw_data/Run1Dx/SRR359970_1.fastq.gz
+    R2: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Raw_data/Run1Dx/SRR359970_2.fastq.gz
+    sex: F
+    Library: Exome
+    genes: NF1,NF2
+    HPOs: .na
+    MUC1: 'YES'
+  SRR359972:
+    R1: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Raw_data/Run1Dx/SRR359972_1.fastq.gz
+    R2: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Raw_data/Run1Dx/SRR359972_2.fastq.gz
+    sex: M
+    Library: Exome
+    genes: NF1,NF2
+    HPOs: .na
+    MUC1: 'NO'

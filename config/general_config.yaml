@@ -1,0 +1,19 @@
+## Paths
+raw_data_base_path: ""
+results_base_path: ""
+logs_and_bmk_base_path: ""
+
+## Reff files
+genome: ""
+genome_unc: ""
+gtf: ""
+gtf_unc: ""
+
+## Images and environments to work on
+images:
+  fastqc_singularity: "fastqc_0.12.1.sif"
+  multiqc_singularity: "multiqc_1_8.sif"
+  trimmomatic_singularity: "trimmomatic_0_38.sif"
+  bwa_singularity: "bwa_0.7.17.sif"
+  samtools_singularity: "samtools_1.20.sif"
+  varscan_singularity: "varscan_2_4_2.sif"
