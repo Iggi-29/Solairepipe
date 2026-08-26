@@ -76,7 +76,7 @@ general_yaml$gtf_unc <- genome_gtf_unc
 general_yaml$images <- sapply(X = general_yaml$images, FUN = function(x) {
   full_path_name <- paste0(x = c(singulatity_images_base_path,"/",x), collapse = "")
   return(full_path_name)
-}, USE.NAMES = FALSE)
+}, USE.NAMES = TRUE, simplify = FALSE)
 
 ## Generate the final yaml information
 final_yaml <- general_yaml 
