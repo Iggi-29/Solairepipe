@@ -1,4 +1,4 @@
-### Basic snakefile
+### Basic snakefile for HC analysis
 import pandas as pd
 from shutil import copyfile
 import os, glob, re, sys
