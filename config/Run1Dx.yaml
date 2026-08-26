@@ -6,12 +6,12 @@ genome_unc: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/dat
 gtf: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/gencode.v50.primary_assembly.annotation.gtf.gz
 gtf_unc: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/gencode.v50.primary_assembly.annotation.gtf
 images:
-- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/fastqc_0.12.1.sif
-- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/multiqc_1_8.sif
-- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/trimmomatic_0_38.sif
-- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/bwa_0.7.17.sif
-- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/samtools_1.20.sif
-- /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/varscan_2_4_2.sif
+  fastqc_singularity: /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/fastqc_0.12.1.sif
+  multiqc_singularity: /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/multiqc_1_8.sif
+  trimmomatic_singularity: /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/trimmomatic_0_38.sif
+  bwa_singularity: /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/bwa_0.7.17.sif
+  samtools_singularity: /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/samtools_1.20.sif
+  varscan_singularity: /imppc/labs/eclab/Resources/Singularity_sif/Alicorn/varscan_2_4_2.sif
 samples:
   SRR359970:
     R1: /imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Raw_data/Run1Dx/SRR359970_1.fastq.gz
