@@ -4,21 +4,21 @@
 
 rule variant_calling:
     input:
-        mpileup_file = results_base_path + "{sample}/alignments/{sample}.mpileup"
+        mpileup_file = results_base_path + "/{sample}/alignments/{sample}.mpileup"
     output:
-        vcf_snps = results_base_path + "{sample}/Variants/{sample}.SNV.vcf",
-        vcf_indel = results_base_path + "{sample}/Variants/{sample}.INDEL.vcf"
+        vcf_snps = results_base_path + "/{sample}/Variants/{sample}.SNV.vcf",
+        vcf_indel = results_base_path + "/{sample}/Variants/{sample}.INDEL.vcf"
     params:
-        out_dir = results_base_path + "{sample}/Variants"
+        out_dir = results_base_path + "/{sample}/Variants"
     container:
         config["images"]["varscan_singularity"]
     threads:
         1
     benchmark:
-        logs_and_bmk_base_path + "benchmarks/{sample}_variant_calling.bmk"
+        logs_and_bmk_base_path + "/benchmarks/{sample}_variant_calling.bmk"
     log:
-        snp_call = logs_and_bmk_base_path + "log/{sample}_variant_calling.log",
-        indel_call = logs_and_bmk_base_path + "log/{sample}_variant_calling.log",
+        snp_call = logs_and_bmk_base_path + "/log/{sample}_variant_calling.log",
+        indel_call = logs_and_bmk_base_path + "/log/{sample}_variant_calling.log",
     shell:"""
         mkdir -p {params.out_dir}
         ## SNPs
@@ -34,7 +34,7 @@ rule variant_calling:
     
 rule trigger_vcf_generation:
     input:
-        expand(results_base_path + "{sample}/Variants/{sample}.SNV.vcf",
+        expand(results_base_path + "/{sample}/Variants/{sample}.SNV.vcf",
         results_base_path = results_base_path, sample = samples),
-        expand(results_base_path + "{sample}/Variants/{sample}.INDEL.vcf",
+        expand(results_base_path + "/{sample}/Variants/{sample}.INDEL.vcf",
         results_base_path = results_base_path, sample = samples)
