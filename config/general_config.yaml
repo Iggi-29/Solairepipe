@@ -17,3 +17,14 @@ images:
   bwa_singularity: "bwa_0.7.17.sif"
   samtools_singularity: "samtools_1.20.sif"
   varscan_singularity: "varscan_2_4_2.sif"
+
+# Bed files
+bed_files:
+  HC:
+    on_target_bed_file: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/HC_ontarget_hg38.bed"
+    cnv_bed_file: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/HC_CVNs_hg38.bed"
+    annotated_panel_regions: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/HC_Annotated_panel_hg38.tsv"
+  Exome:
+    on_target_bed_file: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/EXOME.bed"
+    cnv_bed_file: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/EXOME.bed"
+    annotated_panel_regions: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/EXOMES.tsv"

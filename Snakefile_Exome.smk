@@ -6,6 +6,9 @@ import os, glob, re, sys
 ### config file importation
 configfile: "config/config.yaml"
 
+### type of panel
+type_of_panel = "Exome"
+
 ## get variables
 raw_data_base_path = config["raw_data_base_path"]
 results_base_path = config["results_base_path"]
@@ -13,6 +16,12 @@ logs_and_bmk_base_path = config["logs_and_bmk_base_path"]
 
 ## get the sample names
 samples = [s for s in config["samples"]]
+
+## get the bed files
+panel_files = config["bed_files"][type_of_panel]
+on_target_bed_file = panel_files["on_target_bed_file"]
+cnv_bed_file = panel_files["cnv_bed_file"]
+annotated_panel_regions = panel_files["annotated_panel_regions"]
 
 ## reference files
 genome = config["genome"]
