@@ -12,8 +12,8 @@ rule seq_quality:
         place_of_the_raw_files_analysis = results_base_path + "/{sample}/QC/raw_reads",
         place_of_the_trimmed_files_analysis = results_base_path + "/{sample}/QC/trimmed_reads" 
     output:
-        raw_reads_1 = results_base_path + "/{sample}/QC/raw_reads/{sample}_1_fastqc.html",
-        raw_reads_2 = results_base_path + "/{sample}/QC/raw_reads/{sample}_2_fastqc.html",
+        raw_reads_1 = results_base_path + "/{sample}/QC/raw_reads/{sample}_R1_fastqc.html",
+        raw_reads_2 = results_base_path + "/{sample}/QC/raw_reads/{sample}_R2_fastqc.html",
         trimmed_reads1 = results_base_path + "/{sample}/QC/trimmed_reads/{sample}_FP_fastqc.html",
         trimmed_reads2 = results_base_path + "/{sample}/QC/trimmed_reads/{sample}_RP_fastqc.html"
     container:
@@ -33,9 +33,9 @@ rule seq_quality:
 
 rule find_qcs:
     input:
-        expand(results_base_path + "/{sample}/QC/raw_reads/{sample}_1_fastqc.html",
+        expand(results_base_path + "/{sample}/QC/raw_reads/{sample}_R1_fastqc.html",
         results_base_path = results_base_path, sample = samples),
-        expand(results_base_path + "/{sample}/QC/raw_reads/{sample}_2_fastqc.html",
+        expand(results_base_path + "/{sample}/QC/raw_reads/{sample}_R2_fastqc.html",
         results_base_path = results_base_path, sample = samples),
         expand(results_base_path + "/{sample}/QC/trimmed_reads/{sample}_FP_fastqc.html",
         results_base_path = results_base_path, sample = samples),
@@ -83,11 +83,6 @@ rule muiltiQC_raw_reads:
 
 rule trigger_qc_analysis:
     input:
-        # expand(results_base_path + "{sample}/QC/raw_reads/{sample}_1_fastqc.html",
-        # results_base_path = results_base_path, sample = samples),
-        # expand(results_base_path + "{sample}/QC/raw_reads/{sample}_2_fastqc.html",
-        # results_base_path = results_base_path, sample = samples),
-        # results_base_path + "/Run/QC/list_of_raw_QC.txt"
         results_base_path + "/Run/QC/multiQC_raw_reads.html",
         results_base_path + "/Run/QC/multiQC_trimmed_reads.html"
 

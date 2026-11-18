@@ -1,0 +1,78 @@
+## Paths
+raw_data_base_path: ""
+results_base_path: "/imppc/labs/eclab/ijarne/0_Recerca/9_mostres_marc_exoma/results"
+logs_and_bmk_base_path: "/imppc/labs/eclab/ijarne/0_Recerca/9_mostres_marc_exoma/results/logs"
+
+## Reff files
+genome: "/imppc/labs/eclab/Resources/Genomes/Hsapiens/bwa_hg38/genome/GRCh38.primary_assembly.genome_PAR_masked.fa"
+genome_unc: "/imppc/labs/eclab/Resources/Genomes/Hsapiens/bwa_hg38/genome/GRCh38.primary_assembly.genome_PAR_masked.fa"
+gtf: ""
+gtf_unc: ""
+
+## Images and environments to work on
+images:
+  fastqc_singularity: "/imppc/labs/eclab/Resources/Singularity_sif/Alicorn/fastqc_0.12.1.sif"
+  multiqc_singularity: "/imppc/labs/eclab/Resources/Singularity_sif/Alicorn/multiqc_1_8.sif"
+  trimmomatic_singularity: "/imppc/labs/eclab/Resources/Singularity_sif/Alicorn/trimmomatic_0_38.sif"
+  bwa_singularity: "/imppc/labs/eclab/Resources/Singularity_sif/Alicorn/bwa_0.7.17.sif"
+  samtools_singularity: "/imppc/labs/eclab/Resources/Singularity_sif/Alicorn/samtools_1.20.sif"
+  varscan_singularity: "/imppc/labs/eclab/Resources/Singularity_sif/Alicorn/varscan_2_4_2.sif"
+  bedtools_singularity: "/imppc/labs/eclab/Resources/Singularity_sif/Alicorn/bedtools_2_30_0.sif"
+  histlisb_singularity: "/imppc/labs/eclab/Resources/Singularity_sif/Alicorn/htslib_1_16.sif"
+  bcftools_singularity: "/imppc/labs/eclab/Resources/Singularity_sif/Alicorn/bcftools_1_16.sif"
+
+# Bed files
+bed_files:
+  HC:
+    on_target_bed_file: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/HC_ontarget_hg38.bed"
+    cnv_bed_file: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/HC_CVNs_hg38.bed"
+    annotated_panel_regions: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/HC_Annotated_panel_hg38.tsv"
+  Exome:
+    on_target_bed_file: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/EXOME.bed"
+    cnv_bed_file: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/EXOME.bed"
+    annotated_panel_regions: "/imppc/labs/eclab/ijarne/0_Clinica/999_proves_pipeline/Resources/data/bed_files/HC/EXOMES.tsv"
+samples:
+  "24117":
+    R1: /imppc/labs/eclab/Raw_Data/NEURO/24117.extracting/24117/FASTQ/concatenation/24117_R1.fastq.gz
+    R2: /imppc/labs/eclab/Raw_Data/NEURO/24117.extracting/24117/FASTQ/concatenation/24117_R2.fastq.gz
+    sex: F
+    Library: Exome
+    genes: NF1, NF2
+    HPOs: HP:0007354, HP:0012638, HP:0002359, HP:0001347, HP:0003394, HP:0031826, HP:0004302, HP:0007373, HP:0002167, HP:0001260, HP:0002093
+    MUC1: 'YES'
+
+  "19130":
+    R1: /imppc/labs/eclab/Raw_Data/NEURO/19130.extracting/19130/19130_R1.fastq.gz
+    R2: /imppc/labs/eclab/Raw_Data/NEURO/19130.extracting/19130/19130_R2.fastq.gz
+    sex: F
+    Library: Exome
+    genes:  ALS2, ANXA11, AR, ATXN2, C9orf72, CHMP2B, ERLIN1, ERLIN2, FUS, GRN, KIF5A, MATR3, NEK1, OPTN, PFN1, SLC52A2, SLC52A3, SOD1, SPG11, TARDBP, TBK1, UBQLN2, VAPB, VCP, SPTLC2, CHCHD10, DCTN1, HNRNPA2B1, LRP12, SQSTM1, TUBA4A
+    HPOs: HP:0007354, HP:0012638, HP:0002359, HP:0001347, HP:0003394, HP:0031826, HP:0004302, HP:0007373, HP:0002167, HP:0001260, HP:0002093, eeieieieie 
+    MUC1: 'YES'
+
+  "23081":
+    R1: /imppc/labs/eclab/Raw_Data/NEURO/23081.extracting/23081/FASTQ/concatenation/23081_R1.fastq.gz
+    R2: /imppc/labs/eclab/Raw_Data/NEURO/23081.extracting/23081/FASTQ/concatenation/23081_R2.fastq.gz
+    sex: F
+    Library: Exome
+    genes:  ALS2, ANXA11, AR, ATXN2, C9orf72, CHMP2B, ERLIN1, ERLIN2, FUS, GRN, KIF5A, MATR3, NEK1, OPTN, PFN1, SLC52A2, SLC52A3, SOD1, SPG11, TARDBP, TBK1, UBQLN2, VAPB, VCP, SPTLC2, CHCHD10, DCTN1, HNRNPA2B1, LRP12, SQSTM1, TUBA4A
+    HPOs: HP:0007354, HP:0012638, HP:0002359, HP:0001347, HP:0003394, HP:0031826, HP:0004302, HP:0007373, HP:0002167, HP:0001260, HP:0002093
+    MUC1: 'YES'
+
+  "25054":
+    R1: /imppc/labs/eclab/Raw_Data/NEURO/25054.extracting/25054/FASTQ/concatenation/25054_R1.fastq.gz
+    R2: /imppc/labs/eclab/Raw_Data/NEURO/25054.extracting/25054/FASTQ/concatenation/25054_R2.fastq.gz
+    sex: F
+    Library: Exome
+    genes:  ALS2, ANXA11, AR, ATXN2, C9orf72, CHMP2B, ERLIN1, ERLIN2, FUS, GRN, KIF5A, MATR3, NEK1, OPTN, PFN1, SLC52A2, SLC52A3, SOD1, SPG11, TARDBP, TBK1, UBQLN2, VAPB, VCP, SPTLC2, CHCHD10, DCTN1, HNRNPA2B1, LRP12, SQSTM1, TUBA4A
+    HPOs: HP:0007354, HP:0012638, HP:0002359, HP:0001347, HP:0003394, HP:0031826, HP:0004302, HP:0007373, HP:0002167, HP:0001260, HP:0002093
+    MUC1: 'YES'
+
+  "25074":
+    R1: /imppc/labs/eclab/Raw_Data/NEURO/25074.extracting/25074/FASTQ/concatenation/25074_R1.fastq.gz
+    R2: /imppc/labs/eclab/Raw_Data/NEURO/25074.extracting/25074/FASTQ/concatenation/25074_R2.fastq.gz
+    sex: F
+    Library: Exome
+    genes:  ALS2, ANXA11, AR, ATXN2, C9orf72, CHMP2B, ERLIN1, ERLIN2, FUS, GRN, KIF5A, MATR3, NEK1, OPTN, PFN1, SLC52A2, SLC52A3, SOD1, SPG11, TARDBP, TBK1, UBQLN2, VAPB, VCP, SPTLC2, CHCHD10, DCTN1, HNRNPA2B1, LRP12, SQSTM1, TUBA4A, soc un gen fals
+    HPOs: HP:0007354, HP:0012638, HP:0002359, HP:0001347, HP:0003394, HP:0031826, HP:0004302, HP:0007373, HP:0002167, HP:0001260, HP:0002093, HP:000
+    MUC1: 'YES'
