@@ -51,3 +51,6 @@ rsconnect/
 # snakemake things
 .cache/
 .snakemake/
+
+# The java directories
+.java/
